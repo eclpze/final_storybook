@@ -1,0 +1,47 @@
+name: storybook
+description: "Отображение компонетов с библиотеки uikit."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  vize: ^1.0.4
+  flutter_svg: ^2.3.0
+
+  uikit:
+    # Проект с гита
+    git:
+      url: https://github.com/eclpze/final_uikit
+      ref: main
+
+# Если нужно локально подключить проект
+#    path: путь к проекту
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+     - assets/
+
+  fonts:
+    - family: Manrope
+      fonts:
+        - asset: packages/uikit/fonts/Manrope-Bold.ttf
+          weight: 700
+        - asset: packages/uikit/fonts/Manrope-SemiBold.ttf
+          weight: 600
+        - asset: packages/uikit/fonts/Manrope-Medium.ttf
+          weight: 500
+        - asset: packages/uikit/fonts/Manrope-Regular.ttf
+          weight: 400
+
